@@ -4,14 +4,19 @@
   "description": "Node.js sample app for OpenShift 3",
   "main": "server.js",
   "dependencies": {
+    "bluebird": "^3.5.0",
     "chai": "^3.5.0",
     "chai-http": "^2.0.1",
     "ejs": "^2.4.1",
     "express": "^4.13.4",
+    "he": "^1.1.1",
+    "lodash": "^4.17.4",
     "mocha": "^2.4.5",
+    "moment": "^2.18.1",
     "mongodb": "^2.1.16",
     "morgan": "^1.7.0",
-    "object-assign":"4.1.0"
+    "object-assign": "4.1.0",
+    "rss-parser": "^2.7.0"
   },
   "engine": {
     "node": "*",

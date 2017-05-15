@@ -4,6 +4,8 @@ var express = require('express'),
     app     = express(),
     eps     = require('ejs'),
     morgan  = require('morgan');
+
+var news = require('./routes/news');
     
 Object.assign=require('object-assign')
 
@@ -75,6 +77,8 @@ app.get('/', function (req, res) {
     res.render('index.html', { pageCountMessage : null});
   }
 });
+
+app.use('/news', news);
 
 app.get('/pagecount', function (req, res) {
   // try to initialize the db on every request if it's not already
