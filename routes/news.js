@@ -264,9 +264,14 @@ function fetchHuffPo() {
 
             var articles = [];
             parsed.feed.entries.forEach(function(entry) {
+
+                var desc = he.decode(entry.contentSnippet.split("\n")[0]);
+                if (desc.match(/^function/)) {
+                    desc = '';
+                }
                 articles.push({
                     title: entry.title,
-                    description: he.decode(entry.contentSnippet.split("\n")[0]),
+                    description: desc,
                     link: entry.link,
                     provider: 'Huffington Post',
                     icon: false,
